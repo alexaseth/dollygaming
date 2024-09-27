@@ -29,7 +29,7 @@
     /* ------- */
 
     /* background-image  */
-    --bannerback:url(../media/ssaga.png);
+    --bannerback:url(../media/bg1.png);
     --toggleimg:url(../media/menu-alt.png);
     --toggleactiveimg:url(../media/menu-x.png);
     --merback:url(../media/mer-bg.jpg);
@@ -63,7 +63,7 @@ p{
     font-family: var(--pfont);
 }
 section{
-    padding: 30px;
+    padding: 100px;
 }
 /* navbar  */
 nav {
@@ -129,7 +129,7 @@ nav .navigation li a:hover{
 .banner{
     position: relative;
     width:100%;
-    height: 30vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
