@@ -22,14 +22,8 @@
     --logofont:'Maven Pro', sans-serif;
     --navfont:'Ubuntu';
     --titletext:'Dosis';
-    /*--------*/
-
-    /* padding  */
-
-    /* ------- */
-
+    
     /* background-image  */
-    --bannerback:url(../media/bg1.png);
     --toggleimg:url(../media/menu-alt.png);
     --toggleactiveimg:url(../media/menu-x.png);
     --merback:url(../media/mer-bg.jpg);
