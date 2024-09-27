@@ -1,186 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
 
-/* Navigation Menu */
+/* Resetting margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting body and font properties */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navigation styles */
 nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 10px 50px;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.5s ease;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 10;
 }
 
-nav.sticky {
-    background: rgba(0, 0, 0, 0.7);
-}
-
-nav .logo {
+.logo {
     color: #00FFFF;
-    font-weight: 600;
-    font-size: 1.8em;
-    text-transform: uppercase;
-}
-
-nav .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-
-nav .navigation li {
-    margin-left: 40px;
-}
-
-nav .navigation li a {
     text-decoration: none;
-    color: #fff;
-    font-size: 1.1em;
-    font-weight: 600;
-    padding: 6px 15px;
-    border-radius: 20px;
-    transition: 0.3s ease;
-}
-
-nav .navigation li a:hover {
-    background-color: rgba(0, 255, 255, 0.2);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
 }
 
 .menuToggle {
-    display: none;
+    display: none; /* Hide toggle by default */
 }
 
-/* Games Section */
-.game .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.game .box {
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease;
-}
-
-.game .box img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-.game .box:hover {
-    transform: translateY(-10px);
-}
-
-@media (max-width: 991px) {
-    .game .box {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 600px) {
-    .game .box {
-        width: 100%;
-    }
-}
-
-/* Merchandise Section */
-.merchandise .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.merchandise .box {
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: 0.3s ease;
-}
-
-.merchandise .box img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-.merchandise .box:hover {
-    transform: translateY(-10px);
-}
-
-@media (max-width: 991px) {
-    .merchandise .box {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 600px) {
-    .merchandise .box {
-        width: 100%;
-    }
-}
-
-/* Contact Form */
-.contact .contactForm {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.contact .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Navigation links */
+.navigation {
     list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-.contact .social li {
-    margin: 0 10px;
+.navigation li a {
+    text-decoration: none;
+    color: #fff;
 }
 
-.contact .social li a img {
-    width: 30px;
-}
-
-@media (max-width: 991px) {
-    nav .navigation {
-        display: none;
-    }
-
+/* Responsive menu toggle */
+@media (max-width: 768px) {
     .menuToggle {
         display: block;
-        color: #fff;
-        font-size: 2em;
         cursor: pointer;
     }
 
-    .menuToggle.active + .navigation {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 60px;
-        right: 0;
-        background: rgba(0, 0, 0, 0.9);
-        width: 200px;
-        padding: 20px;
-        z-index: 99;
+    .navigation {
+        display: none; /* Hide navigation by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 10px 0; /* Add padding to prevent collapse */
     }
 
     .navigation.active {
-        display: block;
+        display: flex; /* Show navigation when active */
     }
+}
+
+/* Section styles */
+section {
+    padding: 50px 20px; /* Added padding for sections */
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-text {
+    font-size: 32px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row; /* Keep items in a row */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: center; /* Center items */
+}
+
+/* Box styles for games and merchandise */
+.box {
+    width: calc(33.33% - 20px); /* Three boxes per row with margin */
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .box {
+        width: calc(50% - 20px); /* Two boxes per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%; /* One box per row */
+    }
+}
+
+/* Contact form styles */
+.contactForm {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+}
+
+.inputBox50, .inputBox100 {
+    width: 100%;
+    margin-bottom: 15px; /* Add spacing between inputs */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px;
+    border: 1px solid #00FFFF;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+input[type="submit"] {
+    background-color: #00FFFF;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Social icons */
+.social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+}
+
+/* Copyright styles */
+.copyright {
+    text-align: center;
+    margin-top: 20px;
 }
