@@ -29,6 +29,7 @@
     /* ------- */
 
     /* background-image  */
+    --bannerback:url(../media/ssaga.png);
     --toggleimg:url(../media/menu-alt.png);
     --toggleactiveimg:url(../media/menu-x.png);
     --merback:url(../media/mer-bg.jpg);
@@ -62,7 +63,7 @@ p{
     font-family: var(--pfont);
 }
 section{
-    padding: 10px;
+    padding: 50px;
 }
 /* navbar  */
 nav {
@@ -70,8 +71,8 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 10px 50px;
-    z-index: 100;
+    padding: 10px 100px;
+    z-index: 10000;
     display: flex;
     justify-content: space-between;
     align-items: center;
