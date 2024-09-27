@@ -138,7 +138,7 @@
     </section>
 
     <!-- merchandise  -->
-    <section class="merchandise" id="merchandise">
+   <section class="merchandise" id="merchandise">
         <div class="title">
             <lord-icon
                 src="https://cdn.lordicon.com/ippkhukl.json"
@@ -149,7 +149,104 @@
             <h2 class="title-text">Gaming <span>Merchandise</span></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam fugiat nemo qui.</p>
         </div>
+        <div class="content">
+            <div class="box box-1" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/merchandise/streak-hoodie.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Hoodies</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo neque debitis vel aut nam voluptatibus veniam quam deserunt dicta soluta?</p>
+                </div>
+                <a href="#" class="know">Know More</a>
+            </div>
+            <div class="box box-2" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/merchandise/mask.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Mask</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo neque debitis vel aut nam voluptatibus veniam quam deserunt dicta soluta?</p>
+                </div>
+                <a href="#" class="know">Know More</a>
+            </div>
+            <div class="box box-3" data-aos="zoom-out-down">
+                <div class="imgBx">
+                    <img src="media/merchandise/mobile-collabs.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>T-shirts</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo neque debitis vel aut nam voluptatibus veniam quam deserunt dicta soluta?</p>
+                </div>
+                <a href="#" class="know">Know More</a>
+            </div>
     </section>
+    <!-- ----- -->
 
 
+    <!-- contact  -->
+    <section class="contact" id="contact">
+        <div class="content">
+            <div class="text">
+                <h3>Send Us A Message</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis a impedit nulla neque alias temporibus.</p>
+            </div>
+            <div class="contactForm">
+                <form action="mesage.php">
+                    <div class="row100">
+                        <div class="inputBox50">
+                            <input type="text" name="fullname" id="" placeholder="Full Name">
+                        </div>
+                        <div class="inputBox50">
+                            <input type="email" name="fullname" id="" placeholder="Email Adress">
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBox100">
+                            <textarea name="messages" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBox100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="social">
+                <li><a href="https://www.linkedin.com/in/smruti-ranjan-nayak/"><img src="media/icon/linkedin.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/sm8uti/"><img src="media/icon/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="media/icon/facebook.png" alt=""></a></li>
+            </div>
+        </div>
+        <p class="copyright">Desgin & Developed By<a href="https://github.com/sm8UTI/"> SM8UTI</a></p>
+    </section>
+    <!-- ----- -->
+
+
+
+    <!-- script -->
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 2000,
+        });
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('nav');
+            header.classList.toggle("sticky",window.scrollY > 0);
+        })
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
 
