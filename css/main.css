@@ -1,105 +1,76 @@
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-/* Resetting margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Setting body and font properties */
 body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #000;
-    color: #fff;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    font-family: 'Montserrat', sans-serif;
+    background: #1a1a1a;
+    color: #ffffff;
 }
 
-/* Navigation styles */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: relative;
-    z-index: 10;
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    z-index: 999;
 }
 
-.logo {
+nav .logo {
     color: #00FFFF;
+    font-size: 1.5rem;
     text-decoration: none;
-    font-size: 24px;
     display: flex;
     align-items: center;
 }
 
 .menuToggle {
-    display: none; /* Hide toggle by default */
+    display: none;
+    cursor: pointer;
 }
 
-/* Navigation links */
 .navigation {
-    list-style: none;
     display: flex;
-    gap: 20px;
 }
 
-.navigation li a {
+.navigation li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navigation a {
     text-decoration: none;
     color: #fff;
 }
 
-/* Responsive menu toggle */
-@media (max-width: 768px) {
-    .menuToggle {
-        display: block;
-        cursor: pointer;
-    }
-
-    .navigation {
-        display: none; /* Hide navigation by default */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.9);
-        width: 100%;
-        padding: 10px 0; /* Add padding to prevent collapse */
-    }
-
-    .navigation.active {
-        display: flex; /* Show navigation when active */
-    }
-}
-
-/* Section styles */
-section {
-    padding: 50px 20px; /* Added padding for sections */
+.game {
+    padding: 100px 20px;
 }
 
 .title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .title-text {
-    font-size: 32px;
+    font-size: 2rem;
+    margin: 10px 0;
 }
 
 .content {
     display: flex;
-    flex-direction: row; /* Keep items in a row */
-    flex-wrap: wrap; /* Allow wrapping on small screens */
-    justify-content: center; /* Center items */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Box styles for games and merchandise */
 .box {
-    width: calc(33.33% - 20px); /* Three boxes per row with margin */
+    background: #222;
+    border-radius: 10px;
     margin: 10px;
-    text-align: center;
     transition: transform 0.3s;
 }
 
@@ -107,57 +78,75 @@ section {
     transform: scale(1.05);
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .box {
-        width: calc(50% - 20px); /* Two boxes per row */
-    }
-}
-
-@media (max-width: 480px) {
-    .box {
-        width: 100%; /* One box per row */
-    }
-}
-
-/* Contact form styles */
-.contactForm {
-    display: flex;
-    flex-direction: column; /* Stack inputs vertically */
-}
-
-.inputBox50, .inputBox100 {
+.imgBx img {
     width: 100%;
-    margin-bottom: 15px; /* Add spacing between inputs */
+    border-radius: 10px 10px 0 0;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%; /* Full width inputs */
-    padding: 10px;
-    border: 1px solid #00FFFF;
-    border-radius: 5px;
-    background-color: #1a1a1a;
-    color: #fff;
+.text {
+    padding: 15px;
+    text-align: center;
 }
 
-input[type="submit"] {
-    background-color: #00FFFF;
-    color: #000;
-    cursor: pointer;
+.merchandise {
+    padding: 100px 20px;
 }
 
-/* Social icons */
+.merchandise .box {
+    flex: 1 0 21%; /* Changed to adjust box size */
+    margin: 10px;
+}
+
+.contact {
+    padding: 100px 20px;
+}
+
+.contactForm {
+    margin-top: 20px;
+}
+
 .social {
-    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 15px; /* Space between icons */
+    margin-top: 20px;
 }
 
-/* Copyright styles */
+.social li {
+    margin: 0 10px;
+}
+
 .copyright {
     text-align: center;
     margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .menuToggle.active {
+        display: block;
+    }
+
+    .game .content, .merchandise .content {
+        flex-direction: column; /* Stack the boxes vertically on small screens */
+        align-items: center; /* Center align */
+    }
+    
+    .merchandise .box {
+        width: 90%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .title-text {
+        font-size: 1.5rem; /* Smaller font size on mobile */
+    }
 }
